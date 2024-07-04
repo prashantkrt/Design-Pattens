@@ -1,4 +1,4 @@
-package creational_design_patterns.singleton.scenarios_singleton_breaking;
+package creational_design_patterns.singleton.scenarios_breaking_singleton;
 
 public class ThreadTest extends Thread{
 
