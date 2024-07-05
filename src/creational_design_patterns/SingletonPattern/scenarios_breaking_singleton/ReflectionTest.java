@@ -1,4 +1,4 @@
-package creational_design_patterns.Singleton.scenarios_breaking_singleton;
+package creational_design_patterns.SingletonPattern.scenarios_breaking_singleton;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

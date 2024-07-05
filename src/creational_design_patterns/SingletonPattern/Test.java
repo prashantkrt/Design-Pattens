@@ -1,4 +1,4 @@
-package creational_design_patterns.Singleton;
+package creational_design_patterns.SingletonPattern;
 
 public class Test {
     /*
