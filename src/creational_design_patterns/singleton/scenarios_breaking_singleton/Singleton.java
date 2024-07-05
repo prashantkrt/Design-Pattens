@@ -6,7 +6,10 @@ public class Singleton implements Serializable {
 
     private static Singleton instance = null;
 
+    // Handling Reflection
     private Singleton() {
+        if(instance!=null)
+            throw new RuntimeException("Singleton class is already instantiated");
     }
 
     // we have to use synchronized for multithreading case scenarios
@@ -31,7 +34,7 @@ public class Singleton implements Serializable {
 //        }
 //    }
 
-    //double check
+    // double check
     // if an object is null then only enter the synchronized block
     public static Singleton getInstance() {
         if(instance == null) {
@@ -44,12 +47,12 @@ public class Singleton implements Serializable {
         return instance;
     }
 
-    // we can synchronization of few parts
+    // we can synchronization for few parts rather than to block complete method
 
 // for handling the serialization and deserialization case
-//    Object readResolve() {
-//        return instance;
-//    }
+    Object readResolve() {
+        return instance;
+    }
 
 }
 
