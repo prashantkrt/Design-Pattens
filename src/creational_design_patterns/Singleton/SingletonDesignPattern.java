@@ -1,4 +1,4 @@
-package creational_design_patterns.singleton;
+package creational_design_patterns.Singleton;
 
 public class SingletonDesignPattern {
     // Eager Loading or Eager Initialization
