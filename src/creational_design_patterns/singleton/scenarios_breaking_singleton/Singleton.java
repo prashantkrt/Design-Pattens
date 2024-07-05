@@ -2,14 +2,14 @@ package creational_design_patterns.singleton.scenarios_breaking_singleton;
 
 import java.io.Serializable;
 
-public class Singleton implements Serializable {
+public class Singleton implements Serializable, Cloneable {
 
     private static Singleton instance = null;
 
     // Handling Reflection
     private Singleton() {
-        if(instance!=null)
-            throw new RuntimeException("Singleton class is already instantiated");
+//        if(instance!=null)
+//            throw new RuntimeException("Singleton class is already instantiated");
     }
 
     // we have to use synchronized for multithreading case scenarios
@@ -54,6 +54,20 @@ public class Singleton implements Serializable {
         return instance;
     }
 
+    /*
+    clone() method on an object typically performs a shallow copy,
+    meaning the ** new object *** is a distinct instance with the same values for its fields as the original object
+    */
+
+    // handling cloning of and object
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+//        return super.clone(); //perform the shallow copy
+
+
+//        return instance; // or
+        throw new CloneNotSupportedException();
+    }
 }
 
 //synchronized (Singleton.class){
