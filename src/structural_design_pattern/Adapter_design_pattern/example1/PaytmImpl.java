@@ -18,6 +18,7 @@ public class PaytmImpl implements Paytm {
 
     @Override
     public String getPaymentDetail() {
+        System.out.println("Payment Processed using Paytm !! Paytm karo..");
         return details;
     }
 

@@ -17,6 +17,7 @@ public class RazorPayImpl implements RazorPay {
 
     @Override
     public void provideDetails(String data) {
+        System.out.println("Payment processed using RazorPay!!");
         this.data = data;
     }
 

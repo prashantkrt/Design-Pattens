@@ -5,10 +5,12 @@ public class AdapterPatternExample {
         MyApplication application = new MyApplication();
         application.setPaymentType("UPI");
         application.setDetails("myapp@upi");
-        PaymentAdapter paymentAdapter = new PaymentAdapter(new PaytmImpl());
-        Paytm p = PaymentAdapter.ConvertBillDeskToPaytm(application);
+
+        Paytm p = PaymentAdapter.ConvertBillDeskToPaytm(application,new PaytmImpl());
         System.out.println(p.getTypeOfPayment()+" "+p.getPaymentDetail());
 
 
+        RazorPay p2 = PaymentAdapter.ConvertBillDeskToRazorPay(application, new RazorPayImpl());
+        System.out.println(p2.getTypeOfPayment()+" "+p2.getDetails());
     }
 }
