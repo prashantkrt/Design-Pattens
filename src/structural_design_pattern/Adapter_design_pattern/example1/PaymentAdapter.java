@@ -19,7 +19,6 @@ public class PaymentAdapter {
     }
 
     static RazorPay ConvertBillDeskToRazoPay(BillDesk b) {
-
         r.setTypeOfPayment(b.getPaymentType());
         r.provideDetails(b.getDetails());
         return r;

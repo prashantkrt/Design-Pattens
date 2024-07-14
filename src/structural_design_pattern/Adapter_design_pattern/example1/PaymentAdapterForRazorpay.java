@@ -4,7 +4,7 @@ public class PaymentAdapterForRazorpay {
     static Paytm p = null;
 
     PaymentAdapterForRazorpay(Paytm p) {
-        this.p = p;
+        PaymentAdapterForRazorpay.p = p;
     }
 
     static Paytm ConvertBillDeskToPaytm(BillDesk b) {
