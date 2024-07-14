@@ -3,7 +3,6 @@ package structural_design_pattern.Adapter_design_pattern.example1;
 // Now we have created an adapter which will be processing the payment with Paytm new way
 // without changing the actual implementation of MyApplication
 
-
 // common adapter from BillDesk to PayTm or RazorPay
 public class PaymentAdapter {
 
