@@ -6,9 +6,9 @@ import java.util.Comparator;
 import java.util.List;
 // Instead of implementing a single algorithm directly, code receives run-time
 // instructions as which family fo algorithm to use.
-// application can switch strategies at run-time.
+// Application can switch strategies at run-time.
 
-//Example of comparator and comparable
+//Example of a strategy design pattern using comparator and comparable
 class Employee implements Comparable<Employee> {
     private String name;
     private int salary;
