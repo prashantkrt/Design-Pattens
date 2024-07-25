@@ -29,7 +29,13 @@ public class Employee implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone(); // Shallow cloning
+        // return super.clone(); // Shallow cloning
+        // or both are correct
+        // implementing our own!!!
+        Department department = new Department(this.dep.depId); // as we are creating a new instance for department, now it's deep clone on shallow clone
+        Employee employee = new Employee(this.name, this.age, this.empId, department);
+        return employee; // deep copy
+
     }
 
     public String getName() {

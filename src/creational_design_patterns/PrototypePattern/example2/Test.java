@@ -15,5 +15,15 @@ public class Test {
         Employee e=(Employee) e1.clone();
         System.out.println(e.getDep().hashCode()); // 617901222 this is why clone() is a shallow copy
 
+        // when we use custom clone by applying deep clone
+
+        /*
+         all the hashcode will be different
+         2055281021 e1.hascode()
+         1554547125 e1.clone().hashCode()
+         617901222 e1.getDep().hashCode()
+         1159190947 e.getDep().hashCode()
+         */
+
     }
 }
