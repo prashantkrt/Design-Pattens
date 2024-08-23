@@ -8,9 +8,7 @@ public class Main {
         app.setPaymentGateway(new PayPalGateway());
         app.makePayment(100);
 
-
         app.setPaymentGateway(new BillDeskPaymentGateway());
         app.makePayment(100);
-
     }
 }
