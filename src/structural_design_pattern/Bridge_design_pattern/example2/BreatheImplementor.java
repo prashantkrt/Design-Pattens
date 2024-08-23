@@ -1,0 +1,5 @@
+package structural_design_pattern.Bridge_design_pattern.example2;
+
+public interface BreatheImplementor {
+    public void breath();
+}
