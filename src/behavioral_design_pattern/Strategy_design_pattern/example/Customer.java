@@ -1,4 +1,4 @@
-package behavioral_design_pattern.StrategyPattern.example;
+package behavioral_design_pattern.Strategy_design_pattern.example;
 
 public class Customer {
 
