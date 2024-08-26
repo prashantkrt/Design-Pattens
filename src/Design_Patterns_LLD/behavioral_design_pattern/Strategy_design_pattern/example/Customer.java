@@ -1,0 +1,14 @@
+package Design_Patterns_LLD.behavioral_design_pattern.Strategy_design_pattern.example;
+
+public class Customer {
+
+    private CustomerType customerType;
+
+    public Customer(CustomerType customerType) {
+        this.customerType = customerType;
+    }
+
+    public void showInterestRate() {
+        customerType.interestRate();
+    }
+}
