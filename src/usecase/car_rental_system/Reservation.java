@@ -3,6 +3,7 @@ package usecase.car_rental_system;
 import java.util.Date;
 
 public class Reservation {
+
     int reservationId;
     User user;
     Vehicle vehicle;
@@ -25,7 +26,6 @@ public class Reservation {
         this.vehicle=vehicle;
         reservationType = ReservationType.DAILY;
         reservationStatus = ReservationStatus.SCHEDULED;
-
         return reservationId;
     }
 
