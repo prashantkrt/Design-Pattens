@@ -4,8 +4,10 @@ import java.util.PriorityQueue;
 
 public class ElevatorController {
 
-    PriorityQueue<Integer> upMinPQ;
-    PriorityQueue<Integer> downMaxPQ;
+    // Applying lookup operation,
+    // we cannot add below a floor while going uploads
+    PriorityQueue<Integer> upMinPQ; // pehle humsa neech wale floor pe rukega upar jaate samy
+    PriorityQueue<Integer> downMaxPQ; // pehle humesa upar wale floor pe rukega neech jaate samy like 8 to 6 floor to 8 pe pehle then 7 ..
     ElevatorCar elevatorCar;
 
     ElevatorController(ElevatorCar elevatorCar) {
