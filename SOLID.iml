@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/jackson-core-2.17.2.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.17.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,7 +19,16 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.17.2.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/jsoup-1.18.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jackson-core-2.17.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

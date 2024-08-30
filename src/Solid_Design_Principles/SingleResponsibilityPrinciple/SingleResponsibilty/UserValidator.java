@@ -1,27 +1,13 @@
-package Solid_Design_Principles.SingleResponsibilityPrinciple.NonSingleResponsibilty;
+package Solid_Design_Principles.SingleResponsibilityPrinciple.SingleResponsibilty;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-// the problem is in controller we are writing the business logic instead we should be using the
-// separate class
-public class UserController {
+//A separate class for handling validation of User
+public class UserValidator {
 
-    private Store store = new Store();
-
-    //Create a new user
-    public String createUser(String userJson) throws IOException, JsonMappingException {
-        ObjectMapper mapper = new ObjectMapper();
-        User user = mapper.readValue(userJson, User.class);
-        if (!isValidUser(user)) {
-            return "ERROR";
-        }
-        store.addUser(user);
-        return "SUCCESS";
+    public boolean validateUser(User user) {
+        return isValidUser(user);
     }
 
     //Validates the user object
@@ -56,12 +42,10 @@ public class UserController {
         return !matcher.find();
     }
 
-    //check string for valid email address - this is not for prod.
-    //Just for demo. This fails for lots of valid emails.
+    //check string for valid email address
     private boolean isValidEmail(String value) {
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher matcher = pattern.matcher(value);
         return matcher.find();
     }
-
 }
