@@ -1,12 +1,14 @@
-package Solid_Design_Principles.OpenClosedPrinciple.NoOpenClosed;
+package Solid_Design_Principles.OpenClosedPrinciple.NonOpenClosed;
 
-public class PhoneSubscriber {
+public class ISPSubscriber {
     private Long subscriberId;
     private String address;
     private Long phoneNumber;
     private int baseRate;
+    //additional property
+    private Long freeUsage;
 
-    public double calculateRate() {
+    public double calculateBill() {
         return 0.0;
     }
 
@@ -40,5 +42,13 @@ public class PhoneSubscriber {
 
     public void setBaseRate(int baseRate) {
         this.baseRate = baseRate;
+    }
+
+    public Long getFreeUsage() {
+        return freeUsage;
+    }
+
+    public void setFreeUsage(Long freeUsage) {
+        this.freeUsage = freeUsage;
     }
 }

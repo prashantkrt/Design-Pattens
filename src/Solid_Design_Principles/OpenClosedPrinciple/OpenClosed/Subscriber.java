@@ -1,16 +1,15 @@
-package Solid_Design_Principles.OpenClosedPrinciple.NoOpenClosed;
+package Solid_Design_Principles.OpenClosedPrinciple.OpenClosed;
 
-public class ISPSubscriber {
+// Creating a Base or parent class to remove the repetitive code in the child
+// base class is closed for modification
+public abstract class Subscriber {
     private Long subscriberId;
     private String address;
     private Long phoneNumber;
     private int baseRate;
-    //additional property
-    private Long freeUsage;
 
-    public double calculateBill() {
-        return 0.0;
-    }
+    //abstract method
+    public abstract double calculateBill();
 
     public Long getSubscriberId() {
         return subscriberId;
@@ -42,13 +41,5 @@ public class ISPSubscriber {
 
     public void setBaseRate(int baseRate) {
         this.baseRate = baseRate;
-    }
-
-    public Long getFreeUsage() {
-        return freeUsage;
-    }
-
-    public void setFreeUsage(Long freeUsage) {
-        this.freeUsage = freeUsage;
     }
 }

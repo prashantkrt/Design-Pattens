@@ -1,4 +1,4 @@
-package Solid_Design_Principles.OpenClosedPrinciple.NoOpenClosed;
+package Solid_Design_Principles.OpenClosedPrinciple.NonOpenClosed;
 
 import java.time.LocalDateTime;
 import java.util.*;
